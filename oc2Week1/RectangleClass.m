@@ -10,4 +10,19 @@
 
 @implementation RectangleClass
 
+- (id) init
+{
+  if (self == [super init]) {
+    numSides = 4;
+    name = @"Rectangle";
+  }
+  
+  return self;
+}
+
+- (int) GetArea
+{
+  return 5 * 5;
+}
+
 @end
