@@ -10,4 +10,19 @@
 
 @implementation TriangleClass
 
+- (id) init
+{
+  if (self == [super init]) {
+    numSides = 3;
+    name = @"Triangle";
+  }
+  
+  return self;
+}
+
+- (int) GetArea
+{
+  return 0.5f * 10 * 4;
+}
+
 @end
