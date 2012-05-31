@@ -10,4 +10,19 @@
 
 @implementation SquareClass
 
+- (id) init
+{
+  if (self == [super init]) {
+    numSides = 4;
+    name = @"Square";
+  }
+  
+  return self;
+}
+
+- (int) GetArea
+{
+  return 10 * 4;
+}
+
 @end
