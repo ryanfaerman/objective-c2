@@ -10,4 +10,22 @@
 
 @implementation ShapeFactory
 
++ (ShapeClass*) CreateShape:(NSInteger)shapeType
+{
+  switch (shapeType) {
+    case 0:
+      return [[SquareClass alloc] init];
+      break;
+    case 1:
+      return [[TriangleClass alloc] init];
+      break;
+    case 2:
+      return [[RectangleClass alloc] init];
+      break;
+    default:
+      return nil;
+      break;
+  }
+}
+
 @end
