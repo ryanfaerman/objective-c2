@@ -28,17 +28,17 @@
   
   // Add the square label, like a boss!
   UILabel *squareLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 10.0f, 320.0f, 30.0f)];
-  squareLabel.text = [[NSString alloc] initWithFormat:@"Shape Square Area: %d", [square GetArea]];
+  squareLabel.text = [[NSString alloc] initWithFormat:@"Shape %@ Area: %d", [square GetName], [square GetArea]];
   [self.view addSubview:squareLabel];
   
   // Add the triangle label, like a boss!
   UILabel *triangleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 50.0f, 320.0f, 30.0f)];
-  triangleLabel.text = [[NSString alloc] initWithFormat:@"Shape Triangle Area: %d", [triangle GetArea]];
+  triangleLabel.text = [[NSString alloc] initWithFormat:@"Shape %@ Area: %d", [triangle GetName], [triangle GetArea]];
   [self.view addSubview:triangleLabel];
   
   // Add the rectangle label, like a boss!
   UILabel *rectangleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 90.0f, 320.0f, 30.0f)];
-  rectangleLabel.text = [[NSString alloc] initWithFormat:@"Shape Rectangle Area: %d", [rectangle GetArea]];
+  rectangleLabel.text = [[NSString alloc] initWithFormat:@"Shape %@ Area: %d", [rectangle GetName], [rectangle GetArea]];
   [self.view addSubview:rectangleLabel];
   
 }
