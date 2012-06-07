@@ -16,8 +16,10 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+  [super viewDidLoad];
+  
+  // Initialize our state variables
+  total = operand = 0;
 }
 
 - (void)viewDidUnload
@@ -34,9 +36,10 @@
 -(IBAction)onNumberKey:(id)sender
 {
   UIButton *button = (UIButton*) sender;
-  NSLog(@"Number is: %d", button.tag);
-  resultDisplay.text = [[NSString alloc] initWithFormat:@"%d", button.tag];
+  operand = button.tag;
+  resultDisplay.text = [[NSString alloc] initWithFormat:@"%d", operand];
 }
+
 -(IBAction)onMetaKey:(id)sender
 {
   UIButton *button = (UIButton*) sender;
@@ -44,13 +47,19 @@
 
     case 0: // clear
       NSLog(@"Clear!");
+      total = operand = 0;
       resultDisplay.text = @"";
       break;
     case 1: // plus
       NSLog(@"Plus!");
+      total = total + operand;
+      operand = 0;
+      resultDisplay.text = [[NSString alloc] initWithFormat:@"%d", total];
       break;
     case 2: // equals
       NSLog(@"Equals!");
+      total = total + operand;
+      resultDisplay.text = [[NSString alloc] initWithFormat:@"%d", total];
       break;
     case 3: // info
       NSLog(@"Info!");
@@ -58,7 +67,7 @@
     case 4: // close
       NSLog(@"Close!");
       break;
-    case 5:
+    case 5: // switch
       NSLog(@"Switch!");
       break;
     default:

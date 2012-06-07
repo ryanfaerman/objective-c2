@@ -429,6 +429,7 @@
 				75A2302E15804E48000149B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		75A2302F15804E48000149B9 /* Build configuration list for PBXNativeTarget "FSOCalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -437,6 +438,7 @@
 				75A2303115804E48000149B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

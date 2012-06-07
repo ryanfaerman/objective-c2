@@ -11,6 +11,8 @@
 @interface ViewController : UIViewController
 {
   IBOutlet UITextField* resultDisplay;
+  int total;
+  int operand;
 }
 -(IBAction)onNumberKey:(id)sender;
 -(IBAction)onMetaKey:(id)sender;
