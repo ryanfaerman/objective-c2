@@ -36,81 +36,93 @@
   return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
+// Handle number presses
 -(IBAction)onNumberKey:(id)sender
 {
   UIButton *button = (UIButton*) sender;
-  if (active) {
-    operand = button.tag;
-    resultDisplay.text = [[NSString alloc] initWithFormat:@"%d", operand];
-  }
+  if (button != nil) {
+    if (active) {
+      // This lets us handle multi-digit numbers
+      if (operand > 0) {
+        // shift operand up an order of 
+        // magnitude and update the "ones" column
+        operand = operand * 10 + button.tag;
+      } else {
+        // we have only a "ones" column here
+        operand = button.tag;
+      }
+      
+      // update the display with the new operand
+      resultDisplay.text = [[NSString alloc] initWithFormat:@"%d", operand];
+    }
+  } // end if
   
 }
 
+// handle action buttons
 -(IBAction)onMetaKey:(id)sender
 {
   UIButton *button = (UIButton*) sender;
-  switch (button.tag) {
-
-    case 0: // clear
-      NSLog(@"Clear!");
-      if (active) {
-        total = operand = 0;
-        resultDisplay.text = @"";
-      }
-      
-      break;
-    case 1: // plus
-      NSLog(@"Plus!");
-      if (active) {
-        total = total + operand;
-        operand = 0;
-        resultDisplay.text = [[NSString alloc] initWithFormat:@"%d", total];
-      }
-      break;
-    case 2: // equals
-      NSLog(@"Equals!");
-      if (active) {
-        total = total + operand;
-        resultDisplay.text = [[NSString alloc] initWithFormat:@"%d", total];
-      }
-      break;
-    case 3: // info
-      NSLog(@"Info!");
-      [self presentModalViewController:informationPane animated:YES];
-      break;
-    case 4: // close
-      NSLog(@"Close!");
-      break;
-    case 5: // switch
-      NSLog(@"Switch!");
-      active = !active;
-      if (active) {
-        total = operand = 0;
-        resultDisplay.text = @"";
-      }
-      break;
-    default:
-      // do nothing
-      break;
-  }
+  if (button != nil) {
+    switch (button.tag) {
+        
+      case 0: // clear
+        if (active) {
+          total = operand = 0;
+          resultDisplay.text = @"";
+        }
+        break;
+      case 1: // plus
+        if (active) {
+          total = total + operand;
+          operand = 0;
+          resultDisplay.text = [[NSString alloc] initWithFormat:@"%d", total];
+        }
+        break;
+      case 2: // equals
+        if (active) {
+          total = total + operand;
+          resultDisplay.text = [[NSString alloc] initWithFormat:@"%d", total];
+        }
+        break;
+      case 3: // info
+        [self presentModalViewController:informationPane animated:YES];
+        break;
+      case 5: // switch
+        active = !active; // toggle the active state
+        if (active) {
+          total = operand = 0; // reset our total and operand
+          resultDisplay.text = @""; // clear the display
+        }
+        break;
+      default:
+        // do nothing
+        break;
+    }// end switch
+  }// end if
+  
 }
+
+// Handle a color selection
 -(IBAction)onColorChoice:(id)sender
 {
   UISegmentedControl *segment = (UISegmentedControl*) sender;
-  switch (segment.selectedSegmentIndex) {
-    case 0: // white
-      self.view.backgroundColor = [UIColor whiteColor];
-      break;
-    case 1: // blue
-      self.view.backgroundColor = [UIColor blueColor];
-      break;
-    case 2: // green
-      self.view.backgroundColor = [UIColor greenColor];
-      break;
-    default:
-      // do nothing
-      break;
-  }
+  if (segment != nil) {
+    switch (segment.selectedSegmentIndex) {
+      case 0: // white
+        self.view.backgroundColor = [UIColor whiteColor];
+        break;
+      case 1: // blue
+        self.view.backgroundColor = [UIColor blueColor];
+        break;
+      case 2: // green
+        self.view.backgroundColor = [UIColor greenColor];
+        break;
+      default:
+        // do nothing
+        break;
+    } // end switch
+  } // end if
 }
 
 @end
