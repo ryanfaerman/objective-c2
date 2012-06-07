@@ -13,6 +13,7 @@
   IBOutlet UITextField* resultDisplay;
   int total;
   int operand;
+  BOOL active;
 }
 -(IBAction)onNumberKey:(id)sender;
 -(IBAction)onMetaKey:(id)sender;

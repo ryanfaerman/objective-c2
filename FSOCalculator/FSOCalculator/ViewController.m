@@ -20,6 +20,7 @@
   
   // Initialize our state variables
   total = operand = 0;
+  active = YES;
 }
 
 - (void)viewDidUnload
@@ -36,8 +37,11 @@
 -(IBAction)onNumberKey:(id)sender
 {
   UIButton *button = (UIButton*) sender;
-  operand = button.tag;
-  resultDisplay.text = [[NSString alloc] initWithFormat:@"%d", operand];
+  if (active) {
+    operand = button.tag;
+    resultDisplay.text = [[NSString alloc] initWithFormat:@"%d", operand];
+  }
+  
 }
 
 -(IBAction)onMetaKey:(id)sender
@@ -47,19 +51,26 @@
 
     case 0: // clear
       NSLog(@"Clear!");
-      total = operand = 0;
-      resultDisplay.text = @"";
+      if (active) {
+        total = operand = 0;
+        resultDisplay.text = @"";
+      }
+      
       break;
     case 1: // plus
       NSLog(@"Plus!");
-      total = total + operand;
-      operand = 0;
-      resultDisplay.text = [[NSString alloc] initWithFormat:@"%d", total];
+      if (active) {
+        total = total + operand;
+        operand = 0;
+        resultDisplay.text = [[NSString alloc] initWithFormat:@"%d", total];
+      }
       break;
     case 2: // equals
       NSLog(@"Equals!");
-      total = total + operand;
-      resultDisplay.text = [[NSString alloc] initWithFormat:@"%d", total];
+      if (active) {
+        total = total + operand;
+        resultDisplay.text = [[NSString alloc] initWithFormat:@"%d", total];
+      }
       break;
     case 3: // info
       NSLog(@"Info!");
@@ -69,6 +80,11 @@
       break;
     case 5: // switch
       NSLog(@"Switch!");
+      active = !active;
+      if (active) {
+        total = operand = 0;
+        resultDisplay.text = @"";
+      }
       break;
     default:
       break;
