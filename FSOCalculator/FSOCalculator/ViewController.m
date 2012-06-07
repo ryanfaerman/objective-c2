@@ -31,4 +31,43 @@
   return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
+-(IBAction)onNumberKey:(id)sender
+{
+  UIButton *button = (UIButton*) sender;
+  NSLog(@"Number is: %d", button.tag);
+  resultDisplay.text = [[NSString alloc] initWithFormat:@"%d", button.tag];
+}
+-(IBAction)onMetaKey:(id)sender
+{
+  UIButton *button = (UIButton*) sender;
+  switch (button.tag) {
+
+    case 0: // clear
+      NSLog(@"Clear!");
+      resultDisplay.text = @"";
+      break;
+    case 1: // plus
+      NSLog(@"Plus!");
+      break;
+    case 2: // equals
+      NSLog(@"Equals!");
+      break;
+    case 3: // info
+      NSLog(@"Info!");
+      break;
+    case 4: // close
+      NSLog(@"Close!");
+      break;
+    case 5:
+      NSLog(@"Switch!");
+      break;
+    default:
+      break;
+  }
+}
+-(IBAction)onColorChoice:(id)sender
+{
+  
+}
+
 @end
