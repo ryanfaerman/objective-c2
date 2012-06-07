@@ -1,0 +1,444 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		75A22FFE15804E48000149B9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A22FFD15804E48000149B9 /* UIKit.framework */; };
+		75A2300015804E48000149B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A22FFF15804E48000149B9 /* Foundation.framework */; };
+		75A2300215804E48000149B9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A2300115804E48000149B9 /* CoreGraphics.framework */; };
+		75A2300815804E48000149B9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75A2300615804E48000149B9 /* InfoPlist.strings */; };
+		75A2300A15804E48000149B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A2300915804E48000149B9 /* main.m */; };
+		75A2300E15804E48000149B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A2300D15804E48000149B9 /* AppDelegate.m */; };
+		75A2301115804E48000149B9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A2301015804E48000149B9 /* ViewController.m */; };
+		75A2301415804E48000149B9 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75A2301215804E48000149B9 /* ViewController.xib */; };
+		75A2301C15804E48000149B9 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A2301B15804E48000149B9 /* SenTestingKit.framework */; };
+		75A2301D15804E48000149B9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A22FFD15804E48000149B9 /* UIKit.framework */; };
+		75A2301E15804E48000149B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A22FFF15804E48000149B9 /* Foundation.framework */; };
+		75A2302615804E48000149B9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75A2302415804E48000149B9 /* InfoPlist.strings */; };
+		75A2302915804E48000149B9 /* FSOCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A2302815804E48000149B9 /* FSOCalculatorTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		75A2301F15804E48000149B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 75A22FF015804E48000149B9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75A22FF815804E48000149B9;
+			remoteInfo = FSOCalculator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		75A22FF915804E48000149B9 /* FSOCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FSOCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		75A22FFD15804E48000149B9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		75A22FFF15804E48000149B9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		75A2300115804E48000149B9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		75A2300515804E48000149B9 /* FSOCalculator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FSOCalculator-Info.plist"; sourceTree = "<group>"; };
+		75A2300715804E48000149B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		75A2300915804E48000149B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		75A2300B15804E48000149B9 /* FSOCalculator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FSOCalculator-Prefix.pch"; sourceTree = "<group>"; };
+		75A2300C15804E48000149B9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		75A2300D15804E48000149B9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		75A2300F15804E48000149B9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		75A2301015804E48000149B9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		75A2301315804E48000149B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		75A2301A15804E48000149B9 /* FSOCalculatorTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FSOCalculatorTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		75A2301B15804E48000149B9 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		75A2302315804E48000149B9 /* FSOCalculatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FSOCalculatorTests-Info.plist"; sourceTree = "<group>"; };
+		75A2302515804E48000149B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		75A2302715804E48000149B9 /* FSOCalculatorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSOCalculatorTests.h; sourceTree = "<group>"; };
+		75A2302815804E48000149B9 /* FSOCalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSOCalculatorTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		75A22FF615804E48000149B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75A22FFE15804E48000149B9 /* UIKit.framework in Frameworks */,
+				75A2300015804E48000149B9 /* Foundation.framework in Frameworks */,
+				75A2300215804E48000149B9 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75A2301615804E48000149B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75A2301C15804E48000149B9 /* SenTestingKit.framework in Frameworks */,
+				75A2301D15804E48000149B9 /* UIKit.framework in Frameworks */,
+				75A2301E15804E48000149B9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		75A22FEE15804E48000149B9 = {
+			isa = PBXGroup;
+			children = (
+				75A2300315804E48000149B9 /* FSOCalculator */,
+				75A2302115804E48000149B9 /* FSOCalculatorTests */,
+				75A22FFC15804E48000149B9 /* Frameworks */,
+				75A22FFA15804E48000149B9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		75A22FFA15804E48000149B9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				75A22FF915804E48000149B9 /* FSOCalculator.app */,
+				75A2301A15804E48000149B9 /* FSOCalculatorTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		75A22FFC15804E48000149B9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				75A22FFD15804E48000149B9 /* UIKit.framework */,
+				75A22FFF15804E48000149B9 /* Foundation.framework */,
+				75A2300115804E48000149B9 /* CoreGraphics.framework */,
+				75A2301B15804E48000149B9 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		75A2300315804E48000149B9 /* FSOCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				75A2300C15804E48000149B9 /* AppDelegate.h */,
+				75A2300D15804E48000149B9 /* AppDelegate.m */,
+				75A2300F15804E48000149B9 /* ViewController.h */,
+				75A2301015804E48000149B9 /* ViewController.m */,
+				75A2301215804E48000149B9 /* ViewController.xib */,
+				75A2300415804E48000149B9 /* Supporting Files */,
+			);
+			path = FSOCalculator;
+			sourceTree = "<group>";
+		};
+		75A2300415804E48000149B9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				75A2300515804E48000149B9 /* FSOCalculator-Info.plist */,
+				75A2300615804E48000149B9 /* InfoPlist.strings */,
+				75A2300915804E48000149B9 /* main.m */,
+				75A2300B15804E48000149B9 /* FSOCalculator-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		75A2302115804E48000149B9 /* FSOCalculatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				75A2302715804E48000149B9 /* FSOCalculatorTests.h */,
+				75A2302815804E48000149B9 /* FSOCalculatorTests.m */,
+				75A2302215804E48000149B9 /* Supporting Files */,
+			);
+			path = FSOCalculatorTests;
+			sourceTree = "<group>";
+		};
+		75A2302215804E48000149B9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				75A2302315804E48000149B9 /* FSOCalculatorTests-Info.plist */,
+				75A2302415804E48000149B9 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		75A22FF815804E48000149B9 /* FSOCalculator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75A2302C15804E48000149B9 /* Build configuration list for PBXNativeTarget "FSOCalculator" */;
+			buildPhases = (
+				75A22FF515804E48000149B9 /* Sources */,
+				75A22FF615804E48000149B9 /* Frameworks */,
+				75A22FF715804E48000149B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FSOCalculator;
+			productName = FSOCalculator;
+			productReference = 75A22FF915804E48000149B9 /* FSOCalculator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		75A2301915804E48000149B9 /* FSOCalculatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75A2302F15804E48000149B9 /* Build configuration list for PBXNativeTarget "FSOCalculatorTests" */;
+			buildPhases = (
+				75A2301515804E48000149B9 /* Sources */,
+				75A2301615804E48000149B9 /* Frameworks */,
+				75A2301715804E48000149B9 /* Resources */,
+				75A2301815804E48000149B9 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				75A2302015804E48000149B9 /* PBXTargetDependency */,
+			);
+			name = FSOCalculatorTests;
+			productName = FSOCalculatorTests;
+			productReference = 75A2301A15804E48000149B9 /* FSOCalculatorTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		75A22FF015804E48000149B9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 75A22FF315804E48000149B9 /* Build configuration list for PBXProject "FSOCalculator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 75A22FEE15804E48000149B9;
+			productRefGroup = 75A22FFA15804E48000149B9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				75A22FF815804E48000149B9 /* FSOCalculator */,
+				75A2301915804E48000149B9 /* FSOCalculatorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		75A22FF715804E48000149B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75A2300815804E48000149B9 /* InfoPlist.strings in Resources */,
+				75A2301415804E48000149B9 /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75A2301715804E48000149B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75A2302615804E48000149B9 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		75A2301815804E48000149B9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		75A22FF515804E48000149B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75A2300A15804E48000149B9 /* main.m in Sources */,
+				75A2300E15804E48000149B9 /* AppDelegate.m in Sources */,
+				75A2301115804E48000149B9 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75A2301515804E48000149B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75A2302915804E48000149B9 /* FSOCalculatorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		75A2302015804E48000149B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75A22FF815804E48000149B9 /* FSOCalculator */;
+			targetProxy = 75A2301F15804E48000149B9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		75A2300615804E48000149B9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75A2300715804E48000149B9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		75A2301215804E48000149B9 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75A2301315804E48000149B9 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+		75A2302415804E48000149B9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75A2302515804E48000149B9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		75A2302A15804E48000149B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		75A2302B15804E48000149B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		75A2302D15804E48000149B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FSOCalculator/FSOCalculator-Prefix.pch";
+				INFOPLIST_FILE = "FSOCalculator/FSOCalculator-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		75A2302E15804E48000149B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FSOCalculator/FSOCalculator-Prefix.pch";
+				INFOPLIST_FILE = "FSOCalculator/FSOCalculator-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		75A2303015804E48000149B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FSOCalculator.app/FSOCalculator";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FSOCalculator/FSOCalculator-Prefix.pch";
+				INFOPLIST_FILE = "FSOCalculatorTests/FSOCalculatorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		75A2303115804E48000149B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FSOCalculator.app/FSOCalculator";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FSOCalculator/FSOCalculator-Prefix.pch";
+				INFOPLIST_FILE = "FSOCalculatorTests/FSOCalculatorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		75A22FF315804E48000149B9 /* Build configuration list for PBXProject "FSOCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75A2302A15804E48000149B9 /* Debug */,
+				75A2302B15804E48000149B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		75A2302C15804E48000149B9 /* Build configuration list for PBXNativeTarget "FSOCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75A2302D15804E48000149B9 /* Debug */,
+				75A2302E15804E48000149B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		75A2302F15804E48000149B9 /* Build configuration list for PBXNativeTarget "FSOCalculatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75A2303015804E48000149B9 /* Debug */,
+				75A2303115804E48000149B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 75A22FF015804E48000149B9 /* Project object */;
+}
