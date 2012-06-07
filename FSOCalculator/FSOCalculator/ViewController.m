@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "InfoController.h"
 
 @interface ViewController ()
 
@@ -21,6 +22,7 @@
   // Initialize our state variables
   total = operand = 0;
   active = YES;
+  informationPane = [[InfoController alloc] initWithNibName:@"InfoController" bundle:nil];
 }
 
 - (void)viewDidUnload
@@ -74,6 +76,7 @@
       break;
     case 3: // info
       NSLog(@"Info!");
+      [self presentModalViewController:informationPane animated:YES];
       break;
     case 4: // close
       NSLog(@"Close!");
@@ -87,12 +90,27 @@
       }
       break;
     default:
+      // do nothing
       break;
   }
 }
 -(IBAction)onColorChoice:(id)sender
 {
-  
+  UISegmentedControl *segment = (UISegmentedControl*) sender;
+  switch (segment.selectedSegmentIndex) {
+    case 0: // white
+      self.view.backgroundColor = [UIColor whiteColor];
+      break;
+    case 1: // blue
+      self.view.backgroundColor = [UIColor blueColor];
+      break;
+    case 2: // green
+      self.view.backgroundColor = [UIColor greenColor];
+      break;
+    default:
+      // do nothing
+      break;
+  }
 }
 
 @end

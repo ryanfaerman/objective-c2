@@ -20,6 +20,8 @@
 		75A2301E15804E48000149B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A22FFF15804E48000149B9 /* Foundation.framework */; };
 		75A2302615804E48000149B9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 75A2302415804E48000149B9 /* InfoPlist.strings */; };
 		75A2302915804E48000149B9 /* FSOCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A2302815804E48000149B9 /* FSOCalculatorTests.m */; };
+		75A2304015805FF2000149B9 /* InfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A2303E15805FF2000149B9 /* InfoController.m */; };
+		75A2304115805FF2000149B9 /* InfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75A2303F15805FF2000149B9 /* InfoController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,9 @@
 		75A2302515804E48000149B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		75A2302715804E48000149B9 /* FSOCalculatorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSOCalculatorTests.h; sourceTree = "<group>"; };
 		75A2302815804E48000149B9 /* FSOCalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSOCalculatorTests.m; sourceTree = "<group>"; };
+		75A2303D15805FF2000149B9 /* InfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoController.h; sourceTree = "<group>"; };
+		75A2303E15805FF2000149B9 /* InfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoController.m; sourceTree = "<group>"; };
+		75A2303F15805FF2000149B9 /* InfoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +122,9 @@
 				75A2301015804E48000149B9 /* ViewController.m */,
 				75A2301215804E48000149B9 /* ViewController.xib */,
 				75A2300415804E48000149B9 /* Supporting Files */,
+				75A2303D15805FF2000149B9 /* InfoController.h */,
+				75A2303E15805FF2000149B9 /* InfoController.m */,
+				75A2303F15805FF2000149B9 /* InfoController.xib */,
 			);
 			path = FSOCalculator;
 			sourceTree = "<group>";
@@ -223,6 +231,7 @@
 			files = (
 				75A2300815804E48000149B9 /* InfoPlist.strings in Resources */,
 				75A2301415804E48000149B9 /* ViewController.xib in Resources */,
+				75A2304115805FF2000149B9 /* InfoController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +269,7 @@
 				75A2300A15804E48000149B9 /* main.m in Sources */,
 				75A2300E15804E48000149B9 /* AppDelegate.m in Sources */,
 				75A2301115804E48000149B9 /* ViewController.m in Sources */,
+				75A2304015805FF2000149B9 /* InfoController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

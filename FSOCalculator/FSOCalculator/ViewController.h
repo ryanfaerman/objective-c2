@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "InfoController.h"
 
 @interface ViewController : UIViewController
 {
@@ -14,6 +15,8 @@
   int total;
   int operand;
   BOOL active;
+  
+  InfoController *informationPane;
 }
 -(IBAction)onNumberKey:(id)sender;
 -(IBAction)onMetaKey:(id)sender;
