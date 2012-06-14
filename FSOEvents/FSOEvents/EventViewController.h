@@ -8,6 +8,26 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol EventViewDelegate <NSObject>
+
+@required
+- (void)saveEvent:(NSString *)name on:(NSDate*)date;
+
+@end
+
 @interface EventViewController : UIViewController
+{
+  IBOutlet UITextField* eventText;
+  IBOutlet UIDatePicker* eventDatePicker;
+  NSDate *eventDate;
+  
+  id<EventViewDelegate> delegate;
+}
+
+- (IBAction)onButton:(id)sender;
+- (IBAction)onChange:(id)sender;
+- (IBAction)doneButtonOnKeyboardPressed:(id)sender;
+
+@property (strong) id<EventViewDelegate> delegate;
 
 @end
