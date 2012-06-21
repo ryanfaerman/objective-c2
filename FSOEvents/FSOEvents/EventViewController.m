@@ -58,7 +58,7 @@
           [delegate saveEvent:eventText.text on:eventDate];
         }
         // Intentionally fall through to close
-      case 1: // close
+      case 1: // cancel
         eventText.text = @"";
         [self dismissModalViewControllerAnimated:YES];
         break;
