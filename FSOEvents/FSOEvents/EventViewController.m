@@ -41,9 +41,28 @@
     // e.g. self.myOutlet = nil;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{ 
+  closeSwiper = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeSaveEvent:)];
+  closeSwiper.direction = UISwipeGestureRecognizerDirectionLeft;
+  [closeEventLabel addGestureRecognizer:closeSwiper];
+  
+  [super viewWillAppear:animated];
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void)swipeSaveEvent:(UISwipeGestureRecognizer*)swipe
+{
+  if (delegate != nil) {
+    // Pass the data to our delegate if one exists
+    [delegate saveEvent:eventText.text on:eventDate];
+  }
+  eventText.text = @"";
+  [self dismissModalViewControllerAnimated:YES];
 }
 
 // handler for button presses

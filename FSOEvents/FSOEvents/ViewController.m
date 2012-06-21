@@ -24,6 +24,17 @@
     addEventView.delegate = self;
   }
   eventListingText = nil;
+  
+
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{ 
+  addSwiper = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeShowAddEvent:)];
+  addSwiper.direction = UISwipeGestureRecognizerDirectionRight;
+  [addEventLabel addGestureRecognizer:addSwiper];
+  
+  [super viewWillAppear:animated];
 }
 
 - (void)viewDidUnload
@@ -35,6 +46,11 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
   return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+}
+
+- (void)swipeShowAddEvent:(UISwipeGestureRecognizer*)swipe
+{
+  [self presentModalViewController:addEventView animated:YES];
 }
 
 - (IBAction)onShowAddEventView:(id)sender

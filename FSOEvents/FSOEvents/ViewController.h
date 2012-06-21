@@ -14,6 +14,9 @@
   IBOutlet UITextView* eventDisplay;
   EventViewController *addEventView;
   NSString* eventListingText;
+  UISwipeGestureRecognizer *addSwiper;
+  IBOutlet UILabel *addEventLabel;
 }
 - (IBAction)onShowAddEventView:(id)sender;
+- (void)swipeShowAddEvent:(UISwipeGestureRecognizer*)swipe;
 @end
