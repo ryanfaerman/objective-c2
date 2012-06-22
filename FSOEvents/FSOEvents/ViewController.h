@@ -16,7 +16,8 @@
   NSString* eventListingText;
   UISwipeGestureRecognizer *addSwiper;
   IBOutlet UILabel *addEventLabel;
+  UIAlertView *saveAlert;
 }
-- (IBAction)onShowAddEventView:(id)sender;
 - (void)swipeShowAddEvent:(UISwipeGestureRecognizer*)swipe;
+- (IBAction)onSave:(id)sender;
 @end

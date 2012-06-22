@@ -23,13 +23,24 @@
   if (addEventView != nil) {
     addEventView.delegate = self;
   }
-  eventListingText = nil;
+  eventListingText = NULL;
   
-
+  saveAlert = [[UIAlertView alloc] initWithTitle:@"Saved!" message:@"Your events have been saved." delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
+  
+  // Restore any saved event listings
+  NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+  if (defaults != nil) {
+    [defaults removeObjectForKey:@"eventListing"];
+    eventListingText = [defaults objectForKey:@"eventListing"];
+    if (eventListingText != NULL) {
+      eventDisplay.text = eventListingText;
+    }
+  }
 }
 
 - (void)viewWillAppear:(BOOL)animated
 { 
+  // setup the swipe gesture on the label
   addSwiper = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeShowAddEvent:)];
   addSwiper.direction = UISwipeGestureRecognizerDirectionRight;
   [addEventLabel addGestureRecognizer:addSwiper];
@@ -53,22 +64,26 @@
   [self presentModalViewController:addEventView animated:YES];
 }
 
-- (IBAction)onShowAddEventView:(id)sender
-{
-  UIButton *button = (UIButton*) sender;
-  if(button != nil) {
-    [self presentModalViewController:addEventView animated:YES];
-  }
-}
-
 - (void)saveEvent:(NSString *)name on:(NSDate*)date
 {
-  if (eventListingText == nil) {
+  if (eventListingText == NULL) {
     eventDisplay.text = @"";
   }
   NSString *newEventText = [[NSString alloc] initWithFormat:@"New Event: %@\n%@\n\n", name, date];
   eventListingText = [[NSString alloc] initWithFormat:@"%@%@", eventDisplay.text, newEventText];
   eventDisplay.text = eventListingText;
+}
+
+- (IBAction)onSave:(id)sender
+{
+  NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+  // Don't save the default text (or nothing)
+  if (defaults != nil && eventListingText != NULL) {
+    NSLog(@"%@", eventListingText);
+    [defaults setObject:eventListingText forKey:@"eventListing"];
+    [defaults synchronize]; // Commit the data
+    [saveAlert show];    
+  }
 }
 
 @end

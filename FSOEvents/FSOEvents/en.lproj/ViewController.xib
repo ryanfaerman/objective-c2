@@ -43,7 +43,7 @@
 						<string key="NSFrame">{{0, 44}, {320, 365}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="485595106"/>
+						<reference key="NSNextKeyView" ref="301250021"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">1</int>
@@ -74,7 +74,7 @@
 						<string key="NSFrame">{{110, 9}, {100, 21}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="999437379"/>
+						<reference key="NSNextKeyView" ref="807491074"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -82,7 +82,7 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<string key="IBUIText">Date Planner</string>
-						<object class="NSColor" key="IBUITextColor" id="777783367">
+						<object class="NSColor" key="IBUITextColor" id="97693608">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MCAwIDAAA</bytes>
 						</object>
@@ -99,7 +99,7 @@
 							<int key="NSfFlags">16</int>
 						</object>
 					</object>
-					<object class="IBUILabel" id="485595106">
+					<object class="IBUILabel" id="301250021">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{0, 409}, {320, 51}}</string>
@@ -111,7 +111,7 @@
 						<int key="IBUIContentMode">7</int>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<string key="IBUIText">Swipe Right to Add Event</string>
-						<reference key="IBUITextColor" ref="777783367"/>
+						<reference key="IBUITextColor" ref="97693608"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">0</int>
 						<float key="IBUIMinimumFontSize">10</float>
@@ -126,7 +126,7 @@
 							<int key="NSfFlags">16</int>
 						</object>
 					</object>
-					<object class="IBUIButton" id="999437379">
+					<object class="IBUIButton" id="807491074">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{228, 2}, {72, 37}}</string>
@@ -198,9 +198,18 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">addEventLabel</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="485595106"/>
+						<reference key="destination" ref="301250021"/>
 					</object>
 					<int key="connectionID">24</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">onSave:</string>
+						<reference key="source" ref="807491074"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">25</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -227,8 +236,8 @@
 						<reference key="object" ref="774585933"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="874966798"/>
-							<reference ref="485595106"/>
-							<reference ref="999437379"/>
+							<reference ref="301250021"/>
+							<reference ref="807491074"/>
 							<reference ref="202911712"/>
 						</array>
 						<reference key="parent" ref="0"/>
@@ -245,12 +254,12 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">22</int>
-						<reference key="object" ref="485595106"/>
+						<reference key="object" ref="301250021"/>
 						<reference key="parent" ref="774585933"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">23</int>
-						<reference key="object" ref="999437379"/>
+						<reference key="object" ref="807491074"/>
 						<reference key="parent" ref="774585933"/>
 					</object>
 				</array>
@@ -270,7 +279,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">24</int>
+			<int key="maxID">25</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -278,13 +287,13 @@
 					<string key="className">ViewController</string>
 					<string key="superclassName">UIViewController</string>
 					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">onShowAddEventView:</string>
+						<string key="NS.key.0">onSave:</string>
 						<string key="NS.object.0">id</string>
 					</object>
 					<object class="NSMutableDictionary" key="actionInfosByName">
-						<string key="NS.key.0">onShowAddEventView:</string>
+						<string key="NS.key.0">onSave:</string>
 						<object class="IBActionInfo" key="NS.object.0">
-							<string key="name">onShowAddEventView:</string>
+							<string key="name">onSave:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 					</object>
