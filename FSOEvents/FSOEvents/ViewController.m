@@ -30,8 +30,9 @@
   // Restore any saved event listings
   NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
   if (defaults != nil) {
-    [defaults removeObjectForKey:@"eventListing"];
+    //[defaults removeObjectForKey:@"eventListing"];
     eventListingText = [defaults objectForKey:@"eventListing"];
+    
     if (eventListingText != NULL) {
       eventDisplay.text = eventListingText;
     }
